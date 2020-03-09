@@ -27,4 +27,5 @@
   <block wx:for="{{albums}}" wx:key="index" >
     <image src="{{item.cover}}" class="item_cover" bindtap="imgClick" data-index="{{index}}" wx:for-index="index"></image>
   </block> 
+
 </view>

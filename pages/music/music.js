@@ -111,7 +111,7 @@ Page({
       innerAudioContext.src = res.data[this.data.currentIndex].link
     })
 
-    console.log(this.data.albums)
+    console.log(this.data.albums)//[]
     innerAudioContext.onEnded(() => {//监听音频自然播放至结束的事件
       this.setData({//更新滑动条的位置
         currentValue: 0
