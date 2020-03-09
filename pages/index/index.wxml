@@ -1,0 +1,3 @@
+<!--miniprogram/pages/index/index.wxml-->
+<button bindtap="btnclick_1">1.测试在云函数中发送订阅模板</button>
+<button bindtap="btnclick_2">2.测试在云函数中查询数据</button>

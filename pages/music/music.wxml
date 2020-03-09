@@ -1,0 +1,30 @@
+<!--miniprogram/pages/music/music.wxml-->
+
+<view class="body">
+  <view class="player">
+    <view class="disk">
+      <image class="disk_cover" src="{{albums[currentIndex].cover}}" animation="{{animationData}}">
+      </image>
+      <view class="point"></view>
+    </view>
+    <view class="content">
+      <view class="disk_info">
+        <text class="title">{{albums[currentIndex].title}}</text>
+        <text class="singer">{{albums[currentIndex].singer}}</text>
+      </view>
+      <view class="progress_bar">
+         <slider bindchange="sliderchange" block-size="12" class="slider" value="{{currentValue}}" activeColor="black" backgroundColor="red"/>
+      </view>
+      <view class="btn_group">
+        <van-icon name="ascending" size="35px" bind:click="prev_song"/>
+        <van-icon name="{{isPlay ? 'play-circle' : 'pause-circle'}}" size="35px" bind:click="play"/>
+        <van-icon name="descending" size="35px" bind:click="next_song"/>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="album_choice">
+  <block wx:for="{{albums}}" wx:key="index" >
+    <image src="{{item.cover}}" class="item_cover" bindtap="imgClick" data-index="{{index}}" wx:for-index="index"></image>
+  </block> 
+</view>

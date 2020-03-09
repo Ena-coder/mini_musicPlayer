@@ -1,0 +1,8 @@
+<!--miniprogram/pages/test_component/checkbox/checkbox.wxml-->
+<checkbox-group bindchange="checkboxChange">
+  <label wx:for="{{items}}" wx:key="{{index}}" class="checkbox">
+    <checkbox value="{{item.name}}">
+      <text class="text-style">{{item.value}}</text>
+    </checkbox>
+  </label>
+</checkbox-group>
